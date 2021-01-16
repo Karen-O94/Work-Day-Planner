@@ -35,28 +35,28 @@ $(document).ready(function () {
             //setting time and user's text input into the localStorage
             localStorage.setItem(time, userInput);
         })
-        //Write function that retrieves the value of the data hour
-        function formatRows() {
-            //variable to sa
-            var currentHour = moment().hour();
-            timeBlock.each(function () {
+        // //Write function that retrieves the value of the data hour
+        // function formatRows() {
+        //     //variable to sa
+        //     var currentHour = moment().hour();
+        //     timeBlock.each(function () {
 
-                //retrieves numerical value of id (time)
-                var targetRow = parseInt($(this).attr("id").split("hour")[0]);
-                console.log
-                //Compares if event is in the past, present or future and add colour to highlight each condition
-                if (targetRow == currentHour) { //if timeblock
-                    $(this).addClass("present").removeClass("past future");
-                } 
-                else if (targetRow < currentHour) {
-                    $(this).addClass("past").removeClass("present future");
-                } 
-                else { //(targetRow > currentHour)
-                    $(this).addClass("future").removeClass("present past");
-                }
-            });
-        };
-        formatRows();
+        //         //retrieves numerical value of id (time)
+        //         var targetRow = parseInt($(this).attr("id").split("hour")[0]);
+        //         console.log
+        //         //Compares if event is in the past, present or future and add colour to highlight each condition
+        //         if (targetRow == currentHour) { //if timeblock
+        //             $(this).addClass("present").removeClass("past future");
+        //         } 
+        //         else if (targetRow < currentHour) {
+        //             $(this).addClass("past").removeClass("present future");
+        //         } 
+        //         else { //(targetRow > currentHour)
+        //             $(this).addClass("future").removeClass("present past");
+        //         }
+        //     });
+        // };
+        // formatRows();
     })
 
 
