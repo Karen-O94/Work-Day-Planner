@@ -1,18 +1,3 @@
-// GIVEN I am using a daily planner to create a schedule
-// WHEN I open the planner
-// THEN the current day is displayed at the top of the calendar
-// WHEN I scroll down
-// THEN I am presented with time blocks for standard business hours
-// WHEN I view the time blocks for that day
-// THEN each time block is color-coded to indicate whether it is in the past, present, or future
-// WHEN I click into a time block
-// THEN I can enter an event
-// WHEN I click the save button for that time block
-// THEN the text for that event is saved in local storage
-// WHEN I refresh the page
-// THEN the saved events persist
-
-
 //variables 
 var currentDate = moment().format('LL');
 
@@ -45,15 +30,17 @@ $(document).ready(function () {
 
                 //retrieves numerical value of id (time)
                 var targetRow = parseInt($(this).attr("id").split("hour")[0]);
-                console.log
-                //Compares if event is in the past, present or future and add colour to highlight each condition
-                if (targetRow === currentHour) { //if timeblock
+
+                //If/Else statements compares if event is in the past, present or future and add colour to highlight each condition
+                
+                 // adds colour red if timeblock matches current time
+                if (targetRow === currentHour) { 
                     $(this).addClass("present").removeClass("past future");
-                } 
+                }  // adds colour grey if timeblock occured already (past event)
                 else if (targetRow < currentHour) {
                     $(this).addClass("past").removeClass("present future");
                 } 
-                else { //(targetRow > currentHour)
+                else {  // adds colour red if timeblock is yet to occur (future event)
                     $(this).addClass("future").removeClass("present past");
                 }
             });
@@ -64,18 +51,16 @@ $(document).ready(function () {
      $("#10hour .textarea").val(localStorage.getItem("10hour"));
      $("#11hour .textarea").val(localStorage.getItem("11hour"));
      $("#12hour .textarea").val(localStorage.getItem("12hour"));
-     $("#1hour .textarea").val(localStorage.getItem("1hour"));
-     $("#2hour .textarea").val(localStorage.getItem("2hour"));
-     $("#3hour .textarea").val(localStorage.getItem("3hour"));
-     $("#4hour .textarea").val(localStorage.getItem("4hour"));
-     $("#5hour .textarea").val(localStorage.getItem("5hour"));
+     $("#13hour .textarea").val(localStorage.getItem("13hour"));
+     $("#14hour .textarea").val(localStorage.getItem("14hour"));
+     $("#15hour .textarea").val(localStorage.getItem("15hour"));
+     $("#16hour .textarea").val(localStorage.getItem("16hour"));
+     $("#17hour .textarea").val(localStorage.getItem("17hour"));
+    //  $("#18hour .textarea").val(localStorage.getItem("18hour"));
+    //  $("#19hour .textarea").val(localStorage.getItem("19hour"));
+    //  $("#20hour .textarea").val(localStorage.getItem("20hour"));
+    //  $("#21hour .textarea").val(localStorage.getItem("21hour"));
      formatRows();
 
-    })
-
-     // var anyHour = ["#9hour", "#10hour", "#11hour","#12hour","#1hour", "#2hour","#3hour","#4hour","#5hour"]
-     //for (var i=0, i < anyHour.length, i++) {
-
-     //}
-
+    });
 
