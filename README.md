@@ -28,5 +28,5 @@ I used console.log, Chrome DevTools, YouTube and peer reviews to troubleshoot wh
 - HTML
 - [Bootstrap](https://getbootstrap.com/)
 - CSS
-- JavaScript / [jQuery] (https://jquery.com/)
-- [VScode] (https://code.visualstudio.com/)
+- JavaScript / [jQuery](https://jquery.com/)
+- [VScode](https://code.visualstudio.com/)
