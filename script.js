@@ -29,36 +29,53 @@ $(document).ready(function () {
         $(".saveBtn").on("click", function () {
             var time = $(this).closest("div").attr("id");
             var userInput = $(this).siblings("textarea").val();
-            console.log("jquery", time);
+            console.log("hour", time);
             console.log("input", userInput);
 
             //setting time and user's text input into the localStorage
             localStorage.setItem(time, userInput);
         })
-        // //Write function that retrieves the value of the data hour
-        // function formatRows() {
-        //     //variable to sa
-        //     var currentHour = moment().hour();
-        //     timeBlock.each(function () {
+        //Write function that retrieves the value of the data hour
+        function formatRows() {
+            //variable to sa
+            var currentHour = moment().hour();
+            
+            //Use for Each to loop through each time block
+            timeBlock.each(function () {
 
-        //         //retrieves numerical value of id (time)
-        //         var targetRow = parseInt($(this).attr("id").split("hour")[0]);
-        //         console.log
-        //         //Compares if event is in the past, present or future and add colour to highlight each condition
-        //         if (targetRow == currentHour) { //if timeblock
-        //             $(this).addClass("present").removeClass("past future");
-        //         } 
-        //         else if (targetRow < currentHour) {
-        //             $(this).addClass("past").removeClass("present future");
-        //         } 
-        //         else { //(targetRow > currentHour)
-        //             $(this).addClass("future").removeClass("present past");
-        //         }
-        //     });
-        // };
-        // formatRows();
+                //retrieves numerical value of id (time)
+                var targetRow = parseInt($(this).attr("id").split("hour")[0]);
+                console.log
+                //Compares if event is in the past, present or future and add colour to highlight each condition
+                if (targetRow === currentHour) { //if timeblock
+                    $(this).addClass("present").removeClass("past future");
+                } 
+                else if (targetRow < currentHour) {
+                    $(this).addClass("past").removeClass("present future");
+                } 
+                else { //(targetRow > currentHour)
+                    $(this).addClass("future").removeClass("present past");
+                }
+            });
+        };
+
+     //GET ITEMS FROM LOCALSTORAGE TO DISPLAY ON PAGE IF REFRESHED
+     $("#9hour .textarea").val(localStorage.getItem("9hour"));
+     $("#10hour .textarea").val(localStorage.getItem("10hour"));
+     $("#11hour .textarea").val(localStorage.getItem("11hour"));
+     $("#12hour .textarea").val(localStorage.getItem("12hour"));
+     $("#1hour .textarea").val(localStorage.getItem("1hour"));
+     $("#2hour .textarea").val(localStorage.getItem("2hour"));
+     $("#3hour .textarea").val(localStorage.getItem("3hour"));
+     $("#4hour .textarea").val(localStorage.getItem("4hour"));
+     $("#5hour .textarea").val(localStorage.getItem("5hour"));
+     formatRows();
+
     })
 
+     // var anyHour = ["#9hour", "#10hour", "#11hour","#12hour","#1hour", "#2hour","#3hour","#4hour","#5hour"]
+     //for (var i=0, i < anyHour.length, i++) {
 
+     //}
 
 
