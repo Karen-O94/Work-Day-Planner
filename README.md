@@ -20,9 +20,9 @@ Then I worked on how to save the event into the user's `localStorage` by retriev
 As the client wanted a colour-coded timeblock to represent whether event was in the past, present or future; I wrote a function to display this comparison using a `forEach` loop and setting the conditions with if/else statements. 
 
 ## Deployed Application Image
-![image](https://user-images.githubusercontent.com/74797740/104839340-42a0e700-58b8-11eb-97cc-a9cc42c40c71.png)
-![image](https://user-images.githubusercontent.com/74797740/104839355-5cdac500-58b8-11eb-9de4-0feb34e6f19c.png)
+![image](https://user-images.githubusercontent.com/74797740/104839493-644e9e00-58b9-11eb-8d5a-b950cb7cfe14.png)
 
+![image](https://user-images.githubusercontent.com/74797740/104839518-7f211280-58b9-11eb-8d5c-d83342d876c0.png)
 
 ## Difficulties
 Organizing: Similar to previous assignments, I still struggle with figuring out how to organise my JavaScript/jQuery code for it to flow logically especially when writing functions.
