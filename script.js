@@ -56,10 +56,6 @@ $(document).ready(function () {
      $("#15hour .textarea").val(localStorage.getItem("15hour"));
      $("#16hour .textarea").val(localStorage.getItem("16hour"));
      $("#17hour .textarea").val(localStorage.getItem("17hour"));
-    //  $("#18hour .textarea").val(localStorage.getItem("18hour"));
-    //  $("#19hour .textarea").val(localStorage.getItem("19hour"));
-    //  $("#20hour .textarea").val(localStorage.getItem("20hour"));
-    //  $("#21hour .textarea").val(localStorage.getItem("21hour"));
      formatRows();
 
     });
