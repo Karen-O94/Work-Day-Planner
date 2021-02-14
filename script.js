@@ -56,7 +56,7 @@ $(document).ready(function () {
      $("#15hour .textarea").val(localStorage.getItem("15hour"));
      $("#16hour .textarea").val(localStorage.getItem("16hour"));
      $("#17hour .textarea").val(localStorage.getItem("17hour"));
-     formatRows
+     formatRows();
 
     });
 
