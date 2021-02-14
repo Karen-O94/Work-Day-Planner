@@ -35,7 +35,7 @@ $(document).ready(function () {
                 
                  // adds colour red if timeblock matches current time
                 if (targetRow === currentHour) { 
-                    $(this).addClass("present").removeClass("past future");
+                    $(this).addClass("present").removeClass("past future";
                 }  // adds colour grey if timeblock occured already (past event)
                 else if (targetRow < currentHour) {
                     $(this).addClass("past").removeClass("present future");
