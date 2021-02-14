@@ -35,3 +35,7 @@ I used console.log, Chrome DevTools, YouTube and peer reviews to troubleshoot wh
 - CSS
 - JavaScript / [jQuery](https://jquery.com/)
 - [VScode](https://code.visualstudio.com/)
+
+# License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
